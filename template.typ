@@ -1,7 +1,7 @@
 #let project(title: "", authors: (), body) = {
   // Set the document's basic properties.
   set document(author: authors, title: title)
-  set page(numbering: "1", number-align: center, height: auto)
+  set page(numbering: "1", number-align: center)
   set text(font: "New Computer Modern", lang: "sk")
   show math.equation: set text(weight: 400)
   set heading(numbering: "1.1")
@@ -14,9 +14,9 @@
       // #v(1em)
       // #text(size: 16pt)[Časť: Automatizácia]
       #v(3em)
-      #text(size: 24pt, weight: "bold")[Téma: Resin printing with Sonic Mega 8K S]
+      #text(size: 24pt, weight: "bold")[Resin printing with Sonic Mega 8K S]
       #v(10em)
-      #text(size: 14pt)[Autor: Oskar Mihalik]
+      #text(size: 14pt)[Oskar Mihalik]
       #v(1em)
       #text(size: 14pt)[Rok: 2026] // Upravte podľa potreby
     ]
