@@ -1,12 +1,26 @@
 {
     "version": "0.2",
     "ignorePaths": [],
-    "language": "en",
+    "language": "sk, en",
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "caption",
+        "inset",
+        "Lychee",
+        "Mega",
+        "Mihalik",
         "pagebreak",
-        "Phrozen"
+        "Phrozen",
+        "pretrepte",
+        "Prísavky",
+        "resin",
+        "Slicer",
+        "Supports",
+        "true",
+        "weak",
+        "weight",
+        "width"
     ],
     "ignoreWords": [],
     "import": []
