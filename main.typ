@@ -12,6 +12,8 @@
 + Respirátor
 + Silikónová stierka
 + Špachtľa
++ Lievik
++ Páska
 
 #figure(
   image("assets/tools.excalidraw.png"),
@@ -36,6 +38,7 @@
 + *Stavebná platforma*: Plošina, na ktorej sa model vytvára.
 + *Zdroj UV svetla*: LCD obrazovka, ktorá vytvrdzuje živicu.
 + *Z-os*: Mechanizmus, ktorý pohybuje stavebnou platformou hore a dole.
++ *Ovládanie*: Display na ovládanie tlačiarne.
 
 #figure(
   image("assets/printer_parts.excalidraw.svg"),
@@ -65,10 +68,19 @@ Podložka slúži na lepšie priľnutie tlačeného modelu k tlačovej podložke
 ) <raft_example>
 
 Odporúča sa použiť typ podložky "sled", lebo so špachtľou sa ľahšie odliepa.
+Minimálna hrúbka 0.7mm.
 
 === Orientácia modelu
 Správna orientácia modelu je kľúčová pre úspešnú tlač. Ovplyvňuje kvalitu povrchu, potrebu podpier a čas tlače. Všeobecne platí, že je dobré model nakloniť, aby sa znížila plocha jednotlivých vrstiev a predišlo sa tak veľkým prierezom, ktoré môžu spôsobiť zlyhanie tlače.
+#figure(
+  image("assets/prasa_spodok.png"),
+  caption: [Ukážka "sled" podložky],
+)
 
+#figure(
+  image("assets/suction_cups.png"),
+  caption: [Prísavky],
+)
 // #figure(
 //   image("assets/test.excalidraw.png"),
 //   caption: [Príklad správnej orientácie modelu],
@@ -81,8 +93,21 @@ Podpory sú nevyhnutné pre tlač previsnutých častí modelu. Bez nich by sa t
   image("assets/image-1.png"),
   caption: [Ukážka správnych podpier],
 )
+
+#figure(
+  image("assets/prasa_supports.png"),
+  caption: [Ukážka "sled" podložky],
+)
 === Dutiny (Hollowing)
 Vytvorenie dutín v modeli môže ušetriť značné množstvo živice a skrátiť čas tlače. Pri vytváraní dutín je dôležité pridať do modelu diery, aby mohla živica z dutiny vytiecť a aby sa zabránilo vzniku podtlaku počas tlače.
+#figure(
+  image("assets/blockers1.png"),
+  caption: [Ukážka "sled" podložky],
+)
+#figure(
+  image("assets/blockers2.png"),
+  caption: [Ukážka "sled" ],
+)
 
 === Prísavky (Suction cups)
 Prísavky vznikajú, keď sa v modeli vytvorí uzavretá dutina, ktorá sa pri tlači správa ako prísavka. To môže spôsobiť deformáciu modelu alebo jeho odtrhnutie od podpier. Tomuto javu sa dá predísť správnou orientáciou modelu alebo pridaním odtokových dier.
