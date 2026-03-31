@@ -149,6 +149,16 @@ Po naliatí treba ešte pre istotu rozmiešať živicu *silikónovou stierkou*, 
 Usb kľúč vpichneme do tlačiarne a zvolíme vyexportovaný model na tlač pomocou LCD displeja.
 
 == Odkvapkanie
+Tlačiareň disponuje háčikom na zavesenie celej stavebnej platformy. Treba to nechať zavesené minimálne jednu hodinu aby odkvapkala prebytočná živica.
+#figure(
+  image("assets/vat_max.excalidraw.png"),
+  caption: [Háčik na zavesenie],
+)
+
+#figure(
+  image("assets/vat_max.excalidraw.png"),
+  caption: [Zavesená stavebná platforma],
+)
 
 == Odstránenie zo stavebnej platformy a odstránenie podpier
 
@@ -156,6 +166,7 @@ Usb kľúč vpichneme do tlačiarne a zvolíme vyexportovaný model na tlač pom
 
 == Použitie UV stanice
 
+== Výsledný model
 
 
 
