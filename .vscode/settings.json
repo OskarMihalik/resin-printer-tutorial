@@ -1,4 +1,8 @@
 {
     "tinymist.exportPdf": "onSave",
-     "tinymist.outputPath": "./readme"
+     "tinymist.outputPath": "./readme",
+    //  "pasteImage.basePath": "/assets",
+     "pasteImage.path": "${projectRoot}/assets",
+     "pasteImage.showFilePathConfirmInputBox":true,
+     "pasteImage.filePathConfirmInputBoxMode": "onlyName"
 }

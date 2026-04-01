@@ -14,6 +14,7 @@
 + Špachtľa
 + Lievik
 + Páska
++ tenký plochý šraubovák
 
 #figure(
   image("assets/tools.excalidraw.png"),
@@ -150,21 +151,42 @@ Usb kľúč vpichneme do tlačiarne a zvolíme vyexportovaný model na tlač pom
 
 == Odkvapkanie
 Tlačiareň disponuje háčikom na zavesenie celej stavebnej platformy. Treba to nechať zavesené minimálne jednu hodinu aby odkvapkala prebytočná živica.
-#figure(
-  image("assets/vat_max.excalidraw.png"),
-  caption: [Háčik na zavesenie],
-)
 
 #figure(
-  image("assets/vat_max.excalidraw.png"),
+  image("assets/zavesenie.jpg"),
   caption: [Zavesená stavebná platforma],
 )
 
 == Odstránenie zo stavebnej platformy a odstránenie podpier
+Najľahšie sa odstraňujú vytlačené modely pomocou železnej špachtle. Ak náhodou podložka ide veľmi ťažko tak si môžme opatrne pomôcť kladivom, tak ako na #ref(<tazko_iduci>) alebo pomocou tepla (vriaca voda, tepelná pištoľ). V ideálnom prípade by to malo ísť pomerne ľahko ale záleží na nastaveniach pre konkrétnu živicu.
+
+#figure(
+  image("assets/spachtla.png"),
+  caption: [Odstraňovanie modelu od stavebnej platformy],
+) <tazko_iduci>
+
+Následne nás čaká odstránenie podpier, najlepšie to ide malými kliešťami.
+
+#figure(
+  image("assets/odcvakavanie.png"),
+  caption: [Odstraňovanie podpier z modelu],
+)
 
 == Čistenie modelu pomocou IPA
+Pri modeloch bez dutín, modely môžme rovno dať do čistiarne. Ak má model dutiny tak sa treba uistiť aby neboli zapchaté odtokové diery (ak ostanú zapchaté môže nastať výbuch pri zrení v UV stanici). Odporúčame použiť tenký plochý šraubovák na vyčistenie dier.
+
+#figure(
+  image("assets/cleaning.jpg"),
+  caption: [Čistenie modelu v čistiarni],
+)
 
 == Použitie UV stanice
+Položme modely do UV stanice na sklenú rotovaciu podložku, zvoľme režim "Cure" na displeji a nastavme desať minúť. Keď zrenie skončí otočme modely a opakujme.
+
+#figure(
+  image("assets/uv_station.jpg"),
+  caption: [Zrenie v UV stanici],
+)
 
 == Výsledný model
 
@@ -180,3 +202,4 @@ Tlačiareň disponuje háčikom na zavesenie celej stavebnej platformy. Treba to
 - https://helpcenter.phrozen3d.com/hc/en-us/categories/21705405797017-Sonic-Mega-8K-S
 - https://helpcenter.phrozen3d.com/hc/en-us/articles/21706644834201--Sonic-Mega-8K-S-Replacing-the-Film
 - https://www.facebook.com/groups/3dprintingforbeginnersandpros/posts/812021977394663/
+- https://www.reddit.com/r/ElegooSaturn/comments/1dnu5d7/prints_stuck_to_build_plate/
