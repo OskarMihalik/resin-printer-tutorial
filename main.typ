@@ -188,9 +188,14 @@ Položme modely do UV stanice na sklenú rotovaciu podložku, zvoľme režim "Cu
   caption: [Zrenie v UV stanici],
 )
 
-== Výsledný model
+== Výsledný model a ako by sa dali zlepšiť parametre tlače
+Prasa malo velmi veľa podpier na spodku modelu, čo zanechalo veľa poškodení a boli veľmi blízko pri sebe, preto sa ťažko dávali dole.
 
+Nôž nemal podperi vo vnútri dier, čo znamenalo že diery skončili elipsoidné.
 
+Tak isto sme nastavili hrúbku podložky 1mm, čo spôsobilo ťažké odlepovanie.
+
+Pri budúcich tlačiach si musíme na toto dať pozor.
 
 = Zdroje
 - https://all3dp.com/1/j3dtech-guide-to-resin-3d-printing/ <3d_print_source>
