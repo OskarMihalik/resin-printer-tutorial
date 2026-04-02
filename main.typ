@@ -3,18 +3,19 @@
 
 #pagebreak()
 
-= Čo budete potrebovať pred začatím
+= Vybavenie a materiály použité pri tlači
+Pri realizácii projektu sme využívali nasledujúce vybavenie a ochranné pomôcky:
 + Živicová (resin) tlačiareň
 + Čistiareň
 + UV stanica
-+ Živica (resin)
-+ Rukavice
++ Fotopolymérová živica (resin)
++ Ochranné rukavice
 + Respirátor
 + Silikónová stierka
 + Špachtľa
 + Lievik
 + Páska
-+ tenký plochý šraubovák
++ Tenký plochý skrutkovač
 
 #figure(
   image("assets/tools.excalidraw.png"),
@@ -34,7 +35,7 @@
 = Ako funguje živicová tlač?
 Živicová tlač, známa aj ako DPH polymerizácia, využíva tekutú fotopolymérovú živicu, ktorá sa vytvrdzuje pri vystavení UV žiareniu. Tlačiareň má stavebnú platformu, ktorá sa spúšťa do nádržky so živicou. Zdroj UV svetla (LCD obrazovka) selektívne vytvrdzuje živicu vrstvu po vrstve. Po vytvrdnutí jednej vrstvy sa stavebná platforma mierne posunie nahor a proces sa opakuje pre ďalšiu vrstvu, kým sa nevytvorí celý objekt.
 
-Tlačiareň sa skladá z:
+Tlačiareň, s ktorou sme pracovali, sa skladala z nasledujúcich komponentov:
 + *Nádrž na živicu (VAT)*: Nádoba, ktorá obsahuje tekutú živicu.
 + *Stavebná platforma*: Plošina, na ktorej sa model vytvára.
 + *Zdroj UV svetla*: LCD obrazovka, ktorá vytvrdzuje živicu.
@@ -51,12 +52,12 @@ Tlačiareň sa skladá z:
   caption: [Znázornenie fungovania],
 )
 
-= Ako tlačiť
-== Pripravenie 3D modelu
-Pred vytlačením modelu treba model konvertovať do formátu .prz, my sme použili softvér #link("https://lychee.co/", [Lychee Slicer]).
+= Proces prípravy a tlače
+== Príprava 3D modelu
+Pred samotnou tlačou sme museli model konvertovať do formátu .prz. Pre tento účel sme využili softvér #link("https://lychee.co/", [Lychee Slicer]).
 
 === Podložka (Raft)
-Podložka slúži na lepšie priľnutie tlačeného modelu k tlačovej podložke. Zväčšuje plochu prvej vrstvy a znižuje riziko odlepenia modelu počas tlače.
+Na zabezpečenie lepšieho priľnutia tlačeného modelu k platforme sme aplikovali podložku. Tento krok nám umožnil zväčšiť plochu prvej vrstvy a významne znížil riziko odlepenia modelu počas procesu tlače.
 
 #figure(
   image("assets/raft.png"),
@@ -64,10 +65,10 @@ Podložka slúži na lepšie priľnutie tlačeného modelu k tlačovej podložke
 ) <raft_example>
 
 Odporúča sa použiť typ podložky "sled", lebo so špachtľou sa ľahšie odliepa.
-Minimálna hrúbka 0.7mm.
+Minimálna hrúbka ktorá sa odporúča je 0.7mm.
 
 === Orientácia modelu
-Správna orientácia modelu je kľúčová pre úspešnú tlač. Ovplyvňuje kvalitu povrchu, potrebu podpier a čas tlače. Všeobecne platí, že je dobré model nakloniť, aby sa znížila plocha jednotlivých vrstiev a predišlo sa tak veľkým prierezom, ktoré môžu spôsobiť zlyhanie tlače.
+Pri nastavovaní tlače sme kládli veľký dôraz na správnu orientáciu modelu, keďže táto priamo ovplyvňovala kvalitu povrchu, nevyhnutnosť použitia podpier a celkový čas tlače. Model sme zámerne nakláňali, čím sme znížili plochu jednotlivých vrstiev a eliminovali veľké prierezy, ktoré by inak mohli viesť k zlyhaniu tlače.
 #figure(
   image("assets/prasa_spodok.png"),
   caption: [Orientácia],
@@ -80,7 +81,7 @@ Správna orientácia modelu je kľúčová pre úspešnú tlač. Ovplyvňuje kva
 
 
 === Podpory (Supports)
-Podpory sú nevyhnutné pre tlač previsnutých častí modelu. Bez nich by sa tieto časti tlačili do vzduchu a deformovali by sa. Podpory sa po dokončení tlače odstránia. Je dôležité umiestniť dostatok podpier na všetky previsnuté časti. Odstraňovanie podpier takmer vždy zanechá na modeli malé poškodenia, preto je ideálne ich umiestňovať na menej viditeľné miesta.
+Pre úspešné vytlačenie previsnutých častí modelu sme museli definovať adekvátne podpory. Tým sme zabránili tomu, aby sa tieto sekcie tlačili bez opory a následne sa deformovali. Zabezpečovali sme dostatočné množstvo podpier na všetkých rizikových miestach. Keďže odstraňovanie podpier po tlači zanechávalo drobné povrchové defekty, cielene sme ich umiestňovali na menej viditeľné plochy modelu.
 
 #figure(
   image("assets/image-1.png"),
@@ -92,7 +93,7 @@ Podpory sú nevyhnutné pre tlač previsnutých častí modelu. Bez nich by sa t
   caption: [Ukážka správnych podpier 2],
 )
 === Dutiny (Hollowing)
-Vytvorenie dutín v modeli môže ušetriť značné množstvo živice a skrátiť čas tlače. Pri vytváraní dutín je dôležité pridať do modelu diery, aby mohla živica z dutiny vytiecť a aby sa zabránilo vzniku podtlaku počas tlače.
+Za účelom úspory materiálu a zníženia celkového času tlače sme do modelu implementovali dutiny. Súčasťou tohto kroku bolo pridanie odtokových dier, ktoré zabezpečovali plynulé odtekanie nevytvrdenej živice z vnútorných priestorov a predchádzali tak vzniku podtlaku v priebehu tlače.
 #figure(
   image("assets/blockers1.png"),
   caption: [Ukážka dutín],
@@ -103,102 +104,101 @@ Vytvorenie dutín v modeli môže ušetriť značné množstvo živice a skráti
 )
 
 === Prísavky (Suction cups)
-Prísavky vznikajú, keď sa v modeli vytvorí uzavretá dutina, ktorá sa pri tlači správa ako prísavka. To môže spôsobiť deformáciu modelu alebo jeho odtrhnutie od podpier. Tomuto javu sa dá predísť správnou orientáciou modelu alebo pridaním odtokových dier.
+V procese návrhu sme museli dbať na prevenciu vzniku tzv. prísaviek, na ktoré sa mohli premeniť uzavreté dutiny počas tlače. Tieto by mohli zapríčiniť deformáciu alebo odtrhnutie modelu od podpier. Tento potenciálny problém sme vopred eliminovali optimalizáciou orientácie modelu a integráciou dostatočného počtu odtokových dier.
 
 #figure(
   image("assets/suction_cups.png"),
   caption: [Ukážka vzniknutých prísaviek],
 ) <suction>
 
-Odtokové diery možno vidieť ako červené cylindre na #ref(<suction>)
+Odtokové diery sú znázornené ako červené cylindre na #ref(<suction>).
 == Nastavenie parametrov tlačiarne
-Pre dosiahnutie najlepších výsledkov treba nastaviť parametre pre konkrétnu tlačiareň a konkrétnu živicu. Tieto nastavenia je zdĺhavé nastavovať od nuly, preto je dobré nájsť už odskúšané nastavenia a tie poprípade upraviť.
+Pre dosiahnutie optimálnych výsledkov sme dôkladne nakonfigurovali parametre špecifické pre danú tlačiareň a zvolený typ živice. Keďže ladenie od nuly je časovo náročné, vychádzali sme z existujúcich profilov nastavení, ktoré sme následne optimalizovali podľa potrieb nášho modelu.
 
 #figure(
   image("assets/printer_settings.png"),
   caption: [Nastavenie parametrov pre konkrétnu živicu],
 )
 == Export narezaného modelu
-Pri exporte modelu sa vygenerujú konkrétne rezy tak aby ich tlačiareň vedela prečítať.
+Vo fáze exportu sme systémom nechali vygenerovať jednotlivé rezy modelu vo formáte čitateľnom pre tlačiareň.
 #figure(
   image("assets/export.excalidraw.svg"),
   caption: [Export],
 )
 
-Exportovaný súbor .prz môžme nahrať na usb kľúč.
+Výsledný súbor s koncovkou .prz sme následne preniesli pomocou USB flash disku priamo do zariadenia.
 
-== Príprava pred tlačou
-Pred tým ako začneme pracovať so živicou tak si treba na seba dať ochranné pomôcky ako rukavice, zásteru a respirátor.
+== Príprava pracoviska pred tlačou
+Z dôvodu bezpečnosti pri práci s fotopolymérovou živicou sme si pred samotným procesom dôkladne nasadili ochranné pomôcky, vrátane rukavíc, zástery a respirátora.
 #figure(
   image("assets/oblecenie.png", width: 50%),
   caption: [Oblečenie pri práci],
 )
 
-Minimalizujeme zdroje UV žiarenia, zatiahnutím žalúzií.
+Taktiež sme zabezpečili minimalizáciu externých zdrojov UV žiarenia zatiahnutím žalúzií, čím sme predišli nežiaducemu stvrdnutiu materiálu.
 
 == Naliatie živice do nádržky (VAT)
-Najprv fľašu dôkladne pretrepte, pričom druhou rukou pevne držte uzáver (fľaša sa môže pri príliš silnom trepaní otvoriť...). Potom ju nalejte do nádržky (VAT), neplňte ju však viac, než je znázornené na #ref(<max_resin>)
+Nádobu so živicou sme najskôr dôkladne pretrepali s dôrazom na zabezpečenie uzáveru pred náhodným uvoľnením. Následne sme živicu naliali do nádržky (VAT), pričom sme prísne dodržali odporúčanú maximálnu hladinu, zobrazenú na #ref(<max_resin>)
 
 #figure(
   image("assets/vat_max.excalidraw.png"),
   caption: [Maximálne množstvo živice],
 ) <max_resin>
 
-Po naliatí treba ešte pre istotu rozmiešať živicu *silikónovou stierkou*, treba miešať dokým nebude farba jednoliata.
+Látku sme po naliatí ešte dodatočne rozmiešali *silikónovou stierkou*, aby sme dosiahli úplne jednoliatu farbu a konzistenciu roztoku.
 
-== Výber modelu na tlačiarni
-Usb kľúč vpichneme do tlačiarne a zvolíme vyexportovaný model na tlač pomocou LCD displeja.
+== Spustenie tlače a odkvapkanie
+Po pripojení USB flash disku k tlačiarni sme prostredníctvom LCD panelu vybrali cieľový model a iniciovali tlač.
 
-== Odkvapkanie
-Tlačiareň disponuje háčikom na zavesenie celej stavebnej platformy. Treba to nechať zavesené minimálne jednu hodinu aby odkvapkala prebytočná živica.
+Po ukončení tlače sme využili integrovaný háčik na zavesenie stavebnej platformy. Platformu sme v tejto polohe ponechali minimálne hodinu, čím sme zabezpečili dôkladné odkvapkanie prebytočnej nevyužitej živice.
 
 #figure(
   image("assets/zavesenie.jpg"),
   caption: [Zavesená stavebná platforma],
 )
 
-== Odstránenie zo stavebnej platformy a odstránenie podpier
-Najľahšie sa odstraňujú vytlačené modely pomocou železnej špachtle. Ak náhodou podložka ide veľmi ťažko tak si môžme opatrne pomôcť kladivom, tak ako na #ref(<tazko_iduci>) alebo pomocou tepla (vriaca voda, tepelná pištoľ). V ideálnom prípade by to malo ísť pomerne ľahko ale záleží na nastaveniach pre konkrétnu živicu.
+== Odoberanie modelu z platformy a odstránenie podpier
+Na bezpečné uvoľnenie vytlačeného modelu zo stavebnej platformy sme použili kovovú špachtľu. V prípadoch silnejšieho priľnutia sme si pomohli jemným poklepom kladiva, ako je znázornené na #ref(<tazko_iduci>), pričom v prípade nutnosti by bolo možné použiť aj aplikáciu tepla. Priebeh tohto kroku vo veľkej miere závisel od zvolených expozičných nastavení.
 
 #figure(
   image("assets/spachtla.png"),
   caption: [Odstraňovanie modelu od stavebnej platformy],
 ) <tazko_iduci>
 
-Následne nás čaká odstránenie podpier, najlepšie to ide malými kliešťami.
+Následne sme pomocou jemných klieští opatrne odstránili všetky podporné štruktúry z modelu.
 
 #figure(
   image("assets/odcvakavanie.png"),
   caption: [Odstraňovanie podpier z modelu],
 )
 
-== Čistenie modelu pomocou IPA
-Pri modeloch bez dutín, modely môžme rovno dať do čistiarne. Ak má model dutiny tak sa treba uistiť aby neboli zapchaté odtokové diery (ak ostanú zapchaté môže nastať výbuch pri zrení v UV stanici). Odporúčame použiť tenký plochý šraubovák na vyčistenie dier.
+== Čistenie modelu s využitím izopropylalkoholu (IPA)
+Zatiaľ čo pri plných modeloch sme mohli pristúpiť priamo k čisteniu, pri dutých modeloch bola vyžadovaná zvýšená opatrnosť. Dôsledne sme kontrolovali priechodnosť odtokových dier, aby sme zabránili kumulácii tlaku pri následnom zrení v UV stanici. Na precízne spriechodnenie sme využívali tenký plochý skrutkovač. Dôkladné čistenie prebehlo v samotnej čistiarni.
 
 #figure(
   image("assets/cleaning.jpg"),
   caption: [Čistenie modelu v čistiarni],
 )
 
-== Použitie UV stanice
-Položme modely do UV stanice na sklenú rotovaciu podložku, zvoľme režim "Cure" na displeji a nastavme desať minúť. Keď zrenie skončí otočme modely a opakujme.
+== Záverečné zrenie v UV stanici
+Umyté modely sme umiestnili na rotačnú sklenenú podložku do UV stanice. Cez ovládací panel sme aktivovali režim „Cure“ na dobu desiatich minút. Pre dosiahnutie rovnomerného vytvrdenia na všetkých stranách sme po prvom cykle modely otočili a proces opakovali.
 
 #figure(
   image("assets/uv_station.jpg"),
   caption: [Zrenie v UV stanici],
 )
 
-== Výsledný model a ako by sa dali zlepšiť parametre tlače
-Prasa malo velmi veľa podpier na spodku modelu, čo zanechalo veľa poškodení a boli veľmi blízko pri sebe, preto sa ťažko dávali dole.
+== Vyhodnotenie výsledného modelu a možnosti zlepšenia limitujúcich parametrov
+Pri analýze finálneho modelu sme identifikovali niekoľko nedostatkov. Model prasaťa bol zospodu pokrytý nadmerným množstvom husto umiestnených podpier, čo sťažovalo ich odstraňovanie a vyústilo do poškodenia povrchu.
 
-Nôž nemal podperi vo vnútri dier, čo znamenalo že diery skončili elipsoidné.
+V modeloch nožov neboli aplikované adekvátne podpory pre vnútorné diery, v dôsledku čoho sa ich tvar pri tlači deformoval do elipsoidu.
 
-Tak isto sme nastavili hrúbku podložky 1mm, čo spôsobilo ťažké odlepovanie.
+Ďalšia identifikovaná chyba súvisela s prílišnej hrúbkou podložky, ktorú sme nastavili na 1 mm, čo extrémnym spôsobom skomplikovalo separáciu modelu od platformy.
 
-Pri budúcich tlačiach si musíme na toto dať pozor.
+Zaznamenané zistenia sme zapracovali do našej znalostnej bázy a budeme ich využívať ako podklad pre optimalizáciu parametrov pri budúcich iteráciách tlače.
 
 #figure(
-  image("assets/prints.png"),
+  image("assets/prints.png", width: 70%),
   caption: [Ukážka vytlačených modelov],
 )
 
