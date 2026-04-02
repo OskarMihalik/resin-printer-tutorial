@@ -197,6 +197,11 @@ Tak isto sme nastavili hrúbku podložky 1mm, čo spôsobilo ťažké odlepovani
 
 Pri budúcich tlačiach si musíme na toto dať pozor.
 
+#figure(
+  image("assets/prints.png"),
+  caption: [Ukážka vytlačených modelov],
+)
+
 = Zdroje
 - https://all3dp.com/1/j3dtech-guide-to-resin-3d-printing/ <3d_print_source>
 - https://www.reddit.com/r/resinprinting/comments/1eif61h/do_i_need_to_add_support_for_the_base_or_will/
