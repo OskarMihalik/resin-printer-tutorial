@@ -14,6 +14,8 @@
       // #v(1em)
       // #text(size: 16pt)[Časť: Automatizácia]
       #v(3em)
+      #text(size: 20pt, weight: "bold")[Návod na obsluhu]
+      #v(1em)
       #text(size: 24pt, weight: "bold")[Živicová tlačiareň Phrozen Sonic Mega 8K S]
       #v(10em)
       #text(size: 14pt)[Oskar Mihalik]
